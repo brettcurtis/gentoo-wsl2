@@ -111,3 +111,14 @@ emerge --ask --verbose --update --deep --newuse @world
 ```
 
 Go make some ☕!
+
+```none
+emerge -a --depclean
+```
+
+Create an export from powershell:
+
+```none
+mkdir -p C:\WSL2
+wsl --export Gentoo C:\WSL2\Gentoo.tar
+```

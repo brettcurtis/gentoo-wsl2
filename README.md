@@ -39,8 +39,30 @@ Setup a few thangs':
 ```none
 emerge --sync \
 emerge --oneshot sys-apps/portage \
-emerge sudo
-``` 
+emerge sudo vim \
+eselect vi set vim \
+eselect editor set 3 \
+. /etc/profile \
+emerge -a --depclean
+```
+
+NOTE:
+
+```none
+ * Messages for package app-vim/gentoo-syntax-2:
+
+ *
+ * This plugin provides documentation via vim's help system. To
+ * view it, use:
+ *     :help gentoo-syntax
+ *
+ * This plugin makes use of filetype settings. To enable these,
+ * add lines like:
+ *     filetype plugin on
+ *     filetype indent on
+ * to your ~/.vimrc file.
+ *
+```
 
 Setup user:
 
@@ -58,3 +80,34 @@ cat << EOF >> /etc/wsl.conf
 default=brett
 EOF
 ```
+
+Setup CPU_FLAGS_*:
+
+```none
+emerge app-portage/cpuid2cpuflags \
+echo "*/* $(cpuid2cpuflags)" > /etc/portage/package.use/00cpu-flags
+```
+
+Setup timezone:
+
+```none
+echo "America/New_York" > /etc/timezone \
+emerge --config sys-libs/timezone-data
+```
+
+Locale generation:
+
+```none
+vi /etc/locale.gen \
+locale-gen \
+eselect locale set 6 \
+env-update && source /etc/profile
+```
+
+Updating the @world set:
+
+```none
+emerge --ask --verbose --update --deep --newuse @world
+```
+
+Go make some ☕!

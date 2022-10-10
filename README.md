@@ -26,3 +26,10 @@ Enter the Gentoo distribution on WSL by using the command:
 wsl -d Gentoo
 ```
 
+Setup make.conf:
+
+```none
+cd /etc/portge \
+rm make.conf \
+wget https://raw.githubusercontent.com/brettcurtis/gentoo-wsl2/main/make.conf
+```

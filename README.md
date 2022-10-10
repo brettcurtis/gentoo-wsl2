@@ -22,7 +22,7 @@ wsl --import Gentoo C:\Users\brett-home\AppData\Local\WSL\Gentoo\ .\stage3-amd64
 
 Enter the Gentoo distribution on WSL by using the command:
 
-``none
+```none
 wsl -d Gentoo
 ```
 
@@ -32,4 +32,29 @@ Setup make.conf:
 cd /etc/portge \
 rm make.conf \
 wget https://raw.githubusercontent.com/brettcurtis/gentoo-wsl2/main/make.conf
+```
+
+Setup a few thangs':
+
+```none
+emerge --sync \
+emerge --oneshot sys-apps/portage \
+emerge sudo
+``` 
+
+Setup user:
+
+```none
+useradd -m -G wheel brett \
+passwd brett \
+echo "brett ALL=(ALL) NOPASSWD:ALL" | EDITOR='tee -a' visudo
+```
+
+Setup wsl.conf
+
+```none
+cat << EOF >> /etc/wsl.conf
+[user]
+default=brett
+EOF
 ```

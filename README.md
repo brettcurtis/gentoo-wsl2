@@ -166,6 +166,8 @@ emerge --ask --verbose --update --deep --newuse @world
 
 Go make some ☕!
 
+Cleanup:
+
 ```none
 emerge -a --depclean
 ```

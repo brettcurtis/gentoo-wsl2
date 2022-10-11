@@ -29,20 +29,44 @@ wsl -d Gentoo
 Setup make.conf:
 
 ```none
-cd /etc/portge \
-rm make.conf \
+cd /etc/portge
+```
+
+```none
+rm make.conf
+```
+
+```none
 wget https://raw.githubusercontent.com/brettcurtis/gentoo-wsl2/main/make.conf
 ```
 
 Setup a few thangs':
 
 ```none
-emerge --sync \
-emerge --oneshot sys-apps/portage \
-emerge sudo vim \
-eselect vi set vim \
-eselect editor set 3 \
-. /etc/profile \
+emerge --sync
+```
+
+```none
+emerge --oneshot sys-apps/portage
+```
+
+```none
+emerge sudo vim
+```
+
+```none
+eselect vi set vim
+```
+
+```none
+eselect editor set 3
+```
+
+```none
+. /etc/profile
+```
+
+```none
 emerge -a --depclean
 ```
 
@@ -67,8 +91,14 @@ NOTE:
 Setup user:
 
 ```none
-useradd -m -G wheel brett \
-passwd brett \
+useradd -m -G wheel brett
+```
+
+```none
+passwd brett
+```
+
+```none
 echo "brett ALL=(ALL) NOPASSWD:ALL" | EDITOR='tee -a' visudo
 ```
 
@@ -83,30 +113,48 @@ EOF
 Revert to package.use file vs directory:
 
 ```none
-rm -rf /etc/portage/package.use \
+rm -rf /etc/portage/package.use
+```
+
+```none
 touch /etc/portage/package.use
 ```
 
 Setup CPU_FLAGS_*:
 
 ```none
-emerge app-portage/cpuid2cpuflags \
+emerge app-portage/cpuid2cpuflags
+```
+
+```none
 echo "*/* $(cpuid2cpuflags)" > /etc/portage/package.use
 ```
 
 Setup timezone:
 
 ```none
-echo "America/New_York" > /etc/timezone \
+echo "America/New_York" > /etc/timezone
+```
+
+```none
 emerge --config sys-libs/timezone-data
 ```
 
 Locale generation:
 
 ```none
-vi /etc/locale.gen \
-locale-gen \
-eselect locale set 6 \
+vi /etc/locale.gen
+```
+
+```none
+locale-gen
+```
+
+```none
+eselect locale set 6
+```
+
+```none
 env-update && source /etc/profile
 ```
 
@@ -126,5 +174,8 @@ Create an export from powershell:
 
 ```none
 mkdir -p C:\WSL2
+```
+
+```none
 wsl --export Gentoo C:\WSL2\Gentoo.tar
 ```

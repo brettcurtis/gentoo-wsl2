@@ -80,12 +80,18 @@ cat << EOF >> /etc/wsl.conf
 default=brett
 EOF
 ```
+Revert to package.use file vs directory:
+
+```none
+rm -rf /etc/portage/package.use \
+touch /etc/portage/package.use
+```
 
 Setup CPU_FLAGS_*:
 
 ```none
 emerge app-portage/cpuid2cpuflags \
-echo "*/* $(cpuid2cpuflags)" > /etc/portage/package.use/00cpu-flags
+echo "*/* $(cpuid2cpuflags)" > /etc/portage/package.use
 ```
 
 Setup timezone:

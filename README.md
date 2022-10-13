@@ -1,6 +1,4 @@
-<img src="https://user-images.githubusercontent.com/1610100/194944104-53a1b3f0-81c5-4759-835d-9b3a8608f38e.png" width=25% height=25%>
-
-# Configuration for Gentoo on WSL2
+# <img align="left" width="45" height="45" src="https://user-images.githubusercontent.com/1610100/194944104-53a1b3f0-81c5-4759-835d-9b3a8608f38e.png"> Configuration for Gentoo on WSL2
 
 Open up powershell and download the nomultilib stage3 tarball:
 

@@ -27,7 +27,7 @@ wsl -d Gentoo
 Setup make.conf:
 
 ```none
-cd /etc/portge
+cd /etc/portage
 ```
 
 ```none

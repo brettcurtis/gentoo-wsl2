@@ -53,10 +53,6 @@ emerge sudo vim
 ```
 
 ```none
-eselect vi set vim
-```
-
-```none
 eselect editor set 3
 ```
 

@@ -38,6 +38,16 @@ rm make.conf
 wget https://raw.githubusercontent.com/brettcurtis/gentoo-wsl2/main/etc/portage/make.conf
 ```
 
+Setup package.use:
+
+```none
+rm -rf /etc/portage/package.use
+```
+
+```none
+touch /etc/portage/package.use
+```
+
 ```none
 wget https://raw.githubusercontent.com/brettcurtis/gentoo-wsl2/main/etc/portage/package.use
 ```
@@ -107,15 +117,6 @@ cat << EOF >> /etc/wsl.conf
 [user]
 default=brett
 EOF
-```
-Revert to package.use file vs directory:
-
-```none
-rm -rf /etc/portage/package.use
-```
-
-```none
-touch /etc/portage/package.use
 ```
 
 Setup CPU_FLAGS_*:

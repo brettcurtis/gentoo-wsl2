@@ -35,7 +35,11 @@ rm make.conf
 ```
 
 ```none
-wget https://raw.githubusercontent.com/brettcurtis/gentoo-wsl2/main/make.conf
+wget https://raw.githubusercontent.com/brettcurtis/gentoo-wsl2/main/etc/portage/make.conf
+```
+
+```none
+wget https://raw.githubusercontent.com/brettcurtis/gentoo-wsl2/main/etc/portage/package.use
 ```
 
 Setup a few thangs':

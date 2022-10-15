@@ -1,0 +1,12 @@
+# AMD Ryzen 9 5900X 12-core, 24-Thread 32G RAM
+*/* CPU_FLAGS_X86: aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sha sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3
+
+dev-lang/python ssl
+dev-lang/ruby ssl
+net-misc/openssh ssl
+net-misc/rsync ssl
+
+*/* PYTHON_TARGETS: python3_11
+*/* PYTHON_SINGLE_TARGET: python3_11
+
+*/* RUBY_TARGETS: ruby31

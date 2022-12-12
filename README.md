@@ -38,6 +38,10 @@ rm make.conf
 wget https://raw.githubusercontent.com/brettcurtis/gentoo-wsl2/main/etc/portage/make.conf
 ```
 
+```none
+emerge resolve-march-native
+```
+
 Setup package.use:
 
 ```none
@@ -55,11 +59,15 @@ wget https://raw.githubusercontent.com/brettcurtis/gentoo-wsl2/main/etc/portage/
 Setup a few thangs':
 
 ```none
-eselect repository remove gentoo
+emerge app-eselect/eselect-repository dev-vcs/git
 ```
 
 ```none
 eselect repository add gentoo git https://github.com/gentoo-mirror/gentoo.git
+```
+
+```none
+rm -rf /var/db/repos/gentoo
 ```
 
 ```none

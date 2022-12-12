@@ -3,7 +3,7 @@
 Open up powershell and download the nomultilib stage3 tarball:
 
 ```none
-curl -o stage3-amd64-nomultilib-openrc.tar.xz https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20221002T170543Z/stage3-amd64-nomultilib-openrc-20221002T170543Z.tar.xz
+curl -o stage3-amd64-nomultilib-openrc.tar.xz https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20221204T163153Z/stage3-amd64-nomultilib-systemd-20221204T163153Z.tar.xz
 ```
 
 Create a directory for registration:

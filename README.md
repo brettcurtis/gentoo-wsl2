@@ -9,13 +9,13 @@ curl -o stage3-amd64-nomultilib-openrc.tar.xz https://bouncer.gentoo.org/fetch/r
 Create a directory for registration:
 
 ```none
-mkdir -p C:\Users\brett-home\AppData\Local\WSL\Gentoo
+mkdir -p C:\Users\brett\AppData\Local\WSL\Gentoo
 ```
 
 Import downloaded file:
 
 ```none
-wsl --import Gentoo C:\Users\brett-home\AppData\Local\WSL\Gentoo\ .\stage3-amd64-nomultilib-openrc.tar.xz --version 2
+wsl --import Gentoo C:\Users\brett\AppData\Local\WSL\Gentoo\ .\stage3-amd64-nomultilib-openrc.tar.xz --version 2
 ```
 
 Enter the Gentoo distribution on WSL by using the command:
